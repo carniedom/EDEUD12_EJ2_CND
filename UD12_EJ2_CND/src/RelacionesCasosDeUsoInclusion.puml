@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+actor :Bibliotecario:
+usecase "Baja Socio" as baja
+usecase "Buscar Socio" as buscar
+:Bibliotecario: --> baja
+baja ..> buscar:<<include>>
+@enduml
