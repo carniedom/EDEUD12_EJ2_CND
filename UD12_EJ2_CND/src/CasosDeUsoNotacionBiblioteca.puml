@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+skinparam BackgroundColor Khaki
+actor :Socio:
+actor :Bibliotecario:
+rectangle Biblioteca {
+    usecase "Reservar Libro" as reserva
+    usecase "Prestar Libro" as prestamo
+    usecase "Devolver Libro" as devolucion
+    usecase "Actualizar Catálogo" as actualizar
+}
+:Socio: -- reserva
+:Socio: -- prestamo
+:Socio: -- devolucion
+:Bibliotecario: -- prestamo
+:Bibliotecario: -- actualizar
+@enduml
