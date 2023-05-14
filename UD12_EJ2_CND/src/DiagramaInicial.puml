@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+rectangle emp as "Empresa Pedidos"{
+    usecase "Introducir Pedido" as introducirpedido
+    usecase "Cancelar Pedido" as cancelapedido
+    usecase "Obtener Estado\nPedido" as estadopedido
+    usecase "Borrar Pedido" as borrapedido
+    usecase "Buscar Pedidos" as buscapedido
+    usecase "Alta Cliente" as altacliente
+    usecase "Buscar Cliente" as buscacliente
+    usecase "Nuevo Producto" as nuevoproducto
+    usecase "Borrar Producto" as borraproducto
+}
+actor :Empleado:
+actor :Administrador:
+:Empleado: -- introducirpedido
+:Empleado: -- cancelapedido
+:Empleado: -- estadopedido
+:Empleado: -- borrapedido
+:Empleado: -- buscapedido
+:Empleado: -- altacliente
+:Empleado: -- buscacliente
+:Administrador: -- nuevoproducto
+:Administrador: -- borraproducto
+@enduml
