@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+actor :Agente:
+usecase "Evaluar\nSolicitud de Crédito" as solicitud
+usecase "Solicitar información\n adicional al cliente" as datos
+:Agente: --> solicitud
+solicitud <.. datos:<<extend>>
+@enduml
