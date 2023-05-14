@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor :Empleado:
+actor :Administrador:
+rectangle emp as "Empresa Pedidos" {
+
+}
+:Empleado: -- emp
+:Administrador: --emp
+@enduml
