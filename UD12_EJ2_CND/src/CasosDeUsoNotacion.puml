@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor :Actor 1:
+actor :Actor 2:
+rectangle SISTEMA {
+    usecase "Caso de Uso" as caso1
+    usecase "Caso de Uso" as caso2
+    usecase "Caso de Uso" as caso3
+}
+:Actor 1: -- caso1
+:Actor 1: -- caso2
+:Actor 1: -- caso3
+:Actor 2: -- caso1
+:Actor 2: -- caso3
+@enduml
