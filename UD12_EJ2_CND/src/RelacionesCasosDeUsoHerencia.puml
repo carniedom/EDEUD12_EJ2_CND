@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor :Agente:
+usecase "Enviar solicitud crédito" as credito
+usecase "Enviar solicitud crédito personal" as personal
+usecase "Enviar solicitud crédito empresarial" as empresarial
+:Agente: --> credito
+personal --|> credito
+empresarial --|> credito
+@enduml
