@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+actor :Empleado:
+usecase "Alta Cliente" as altacliente
+usecase "Introducir Pedido" as introducepedido
+usecase "Obtener Estado\nPedido" as estadopedido
+usecase "Cancelar Pedido" as cancelapedido
+usecase "Buscar Cliente" as buscacliente
+usecase "Pago en\ncuenta" as pagocuenta
+usecase "Buscar Pedido" as buscapedido
+usecase "Pago con\ntarjeta" as pagotarjeta
+:Empleado: -- altacliente
+:Empleado: -- introducepedido
+:Empleado: -- estadopedido
+:Empleado: -- buscapedido
+:Empleado: -- cancelapedido
+altacliente ..> introducepedido:extiende
+introducepedido ..> buscacliente:incluye
+introducepedido <.. pagotarjeta:extiende
+introducepedido <.. pagocuenta:extiende
+estadopedido ..> buscapedido:incluye
+cancelapedido ..> buscapedido:incluye
+@enduml
